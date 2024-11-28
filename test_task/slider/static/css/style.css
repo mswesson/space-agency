@@ -295,23 +295,19 @@ button {
 @media (max-width: 700px) {
     h1 {
     font-size: 36px;
-    /* Уменьшаем размер заголовка для мобильных */
     line-height: 43.88px;
     }
 
     h2 {
     font-size: 28px;
-    /* Уменьшаем размер заголовка для мобильных */
     }
 
     p {
     font-size: 16px;
-    /* Уменьшаем размер текста для мобильных */
     }
 
     .hamburger {
     display: block;
-    /* Скрываем по умолчанию */
     margin: 0 15px 0 0;
     }
 
@@ -355,11 +351,11 @@ button {
     min-width: 340px;
     height: auto;
     max-height: 313px;
+    padding: 15px;
     }
 
     .section_one_image_block {
     flex-direction: column;
-    /* Меняем направление для мобильных */
     max-width: 340px;
     max-height: 779px;
     gap: 45px;

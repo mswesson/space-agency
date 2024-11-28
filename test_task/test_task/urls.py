@@ -20,7 +20,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', include('slider.urls')),
+    path('', include('slider.urls')),
 ]
 
 if settings.DEBUG:

@@ -1,11 +1,10 @@
+from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
 
 from .models import Slider
 
 
-def index(request):
-    # Получаем все слайды, отсортированные по полю 'order'
+def index(request: HttpRequest) -> HttpResponse:
+    """Выводит стартовую страницу"""
     sliders = Slider.objects.all().order_by('order')
-
-    # Передаём слайды в контекст шаблона
     return render(request, 'index.html', {'sliders': sliders})

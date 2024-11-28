@@ -57,7 +57,7 @@
 
     ```python
     git clone https://github.com/mswesson/space-agency.git
-    cd test_task
+    cd space-agency
     ```
 
 2. Установка зависимостей

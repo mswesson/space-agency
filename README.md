@@ -78,45 +78,36 @@
         poetry install
         ```
 
-3. Настройка базы данных
+3. Создайте и заполните файл *.env* по анологии с *.env.template*
 
-    Создайте базу данных MySQL и добавьте настройки подключения в settings.py:
+4. Установите docker и docker-compose
 
-    ```python
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': '<имя-базы-данных>',
-            'USER': '<имя-пользователя>',
-            'PASSWORD': '<пароль>',
-            'HOST': 'localhost',
-            'PORT': '3306',
-        }
-    }
-    ```
+   Установить можно с оффициального сайта <https://docs.docker.com/engine/install/>
 
-4. Миграции базы данных
+5. Соберите контейнеры
 
     ```bash
-    python manage.py migrate
+    docker compose build
     ```
 
-5. Создание суперпользователя
+6. Запустите сервер
 
-    ```bash
-    python manage.py createsuperuser
-    ```
+   ```bash
+   docker compose up -d
+   ```
 
-6. Подготовим статику
 
-    ```bash
-    python manage.py collectstatic
-    ```
+7. Создание суперпользователя
+    - Входим в контейнер ```docker exec -it <название приложения> bash```
 
-7. Запуск проекта
+    - Создаем пользователя ```python manage.py createsuperuser```
 
-    ```bash
-    python manage.py runserver
-    ```
+8. Запуск проекта
 
-    Откройте браузер и перейдите по адресу: <http://127.0.0.1:8000>
+    Готово!
+
+    Откройте браузер и перейдите по адресу:
+    - Админка для загрузки изображений <http://0.0.0.0:80/admin/>
+
+    - CSS версия сайта <http://0.0.0.0:80/css/>
+    - Bootstrap 5 версия сайта <http://0.0.0.0:80/bootstrap/>

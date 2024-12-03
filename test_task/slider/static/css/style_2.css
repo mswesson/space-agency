@@ -1,0 +1,297 @@
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+body {
+    overflow-x: hidden;
+}
+
+button {
+    width: 88px;
+    height: 44px;
+    border-radius: 4px;
+    padding: 12px 18px;
+    color: #fafafa;
+    background-color: #FF342B;
+    margin: 0;
+    font-size: 16px;
+    line-height: 19.5px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700 !important;
+    font-style: normal;
+    margin-right: 20px;
+}
+
+a {
+    font-size: 16px;
+    line-height: 19.5px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700 !important;
+    font-style: normal;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 56px;
+    line-height: 68.26px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 42px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 52px;
+}
+
+h3 {
+    margin: 0 10px;
+    font-size: 14px;
+    line-height: 26px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    overflow-wrap: break-word;
+}
+
+p {
+    font-size: 18px;
+    line-height: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    background-color: #0A121E !important; /* Цвет фона */
+    max-height: 90px; /* Высота шапки */
+    min-height: 90px;
+}
+
+#logo {
+    width: 120px;
+    height: 90px;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url('/static/index/menu/menu.png');
+}
+
+.btn-danger {
+    width: 88px;
+    height: 44px;
+    border-radius: 4px;
+    background-color: #FF342B;
+}
+
+#advantages {
+    min-height: 915px;
+}
+
+#advantages h1, p {
+    text-align: center;
+}
+
+#advantages h1 {
+    margin: 90px 150px 0px;
+}
+#advantages p {
+    margin: 30px 150px 45px;
+}
+.img-styled {
+    width: 457px;
+    height: 457px;
+    object-fit: cover;
+    border-radius: 40px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.5);
+}
+.text-col {
+    padding: 10px;
+}
+
+#images {
+    background-color: #3C3C3C;
+}
+
+#images h2 {
+    margin: 0;
+    margin-top: 90px;
+    color: white;
+}
+
+
+/* задаю размеры для слайдеров */
+.slider-for {
+    width: 750px !important;
+    height: 420px !important;
+    margin: 45px auto;
+    overflow: hidden !important;
+    border-radius: 40px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.slider-nav {
+    max-width: 900px;
+    min-width: 900px;
+    margin: 0 auto 45px;
+}
+
+.main-image-slider {
+    width: 750px;
+    height: 420px;
+}
+
+.main-image-slider img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.slider-nav-imag {
+    width: 160px;
+    height: 160px;
+    margin: 0 10px 0 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slider-nav-imag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.slick-next:before {
+    font-size: 0;
+}
+
+.slick-prev:before {
+    font-size: 0;
+}
+
+.slick-prev {
+    left: -67px;
+    top: 65px;
+}
+
+.slick-next {
+    right: -30px;
+    top: 65px;
+}
+
+.slick-prev img,
+.slick-next img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+.slick-prev:hover img,
+.slick-next:hover img {
+    opacity: 0.8;
+}
+
+@media ((max-width: 1200px)) {
+    h1 {
+        font-size: 36px;
+        line-height: 43.88px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+    .navbar {
+        max-height: 300px; /* Высота шапки */
+        min-height: 70px;
+    }
+    #site-header img {
+        width: 80px;
+        height: 60px;
+    }
+    .d-flex {
+        flex-direction: column;
+    }
+    #advantages h1 {
+        margin: 40px 20px 0px;
+    }
+    #advantages p {
+        margin: 15px 20px 0px;
+    }
+    .advantages-text {
+        padding: 0px;
+        margin: 45px 0;
+        width: 100vh;
+    }
+    .img-styled {
+        margin-top: 45px;
+        width: 340px;
+        height: 340px;
+    }
+
+    .slider-for {
+        width: 340px !important;
+        height: 340px !important;
+        margin: 20px auto;
+        overflow: hidden !important;
+        border-radius: 40px;
+        box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.5);
+    }
+    
+    .main-image-slider {
+        width: 340px;
+        height: 340px;
+    }
+    
+    .main-image-slider img{
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .slider-nav {
+        max-width: 440px;
+        min-width: 440px;
+        margin: 0 auto 45px;
+        overflow: hidden;
+    }
+
+    .slider-nav-imag {
+        width: 80px;
+        height: 80px;
+        margin: 0 10px 0 0;
+        overflow: hidden;
+        border-radius: 20px;
+    }
+    
+    .slider-nav-imag img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .slick-prev img,
+    .slick-next img {
+        width: 0;
+        height: 0;
+    }
+}

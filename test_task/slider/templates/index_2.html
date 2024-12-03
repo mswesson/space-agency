@@ -1,0 +1,163 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap edition</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'index/slick/slick.css' %}" />
+  <link rel="stylesheet" type="text/css" href="{% static 'index/slick/slick-theme.css' %}" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="{% static 'css/style_2.css' %}">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light mynavbar">
+    <div class="container" id="site-header">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Переключить навигацию">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <a class="navbar-brand"><img src="{% static 'index/header/logo.png' %}" id="logo" alt="Logo"></a>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#advantages">ПРЕИМУЩЕСТВА</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#images">ФОТОГРАФИИ</a>
+          </li>
+        </ul>
+      </div>
+      <button type="button" class="btn btn-danger">Вход</button>
+    </div>
+  </nav>
+  <div class="container" id="advantages">
+    <div class="row text-center mb-4">
+      <div class="col">
+        <h1>Космическое агентство</h1>
+        <p>
+          Национальное управление по аэронавтике и исследованию космического
+          пространства — ведомство, относящееся к федеральному правительству
+          США и подчиняющееся непосредственно президенту США.
+        </p>
+      </div>
+    </div>
+    <div class="row d-flex flex-wrap justify-content-center align-items-center">
+
+      <!-- Левая колонка -->
+      <div class="col-6 advantages-text">
+        <div class="row">
+          <div class="col-6 text-col text-center">
+            <img src="{% static 'index/section_one/icon_1.png' %}" alt="" width="64" class="mb-2">
+            <h3>Спейс шаттлы — пилотируемые корабли</h3>
+          </div>
+          <div class="col-6 text-col text-center">
+            <img src="{% static 'index/section_one/icon_2.png' %}" alt="" width="64" class="mb-2">
+            <h3>Лучшее телескопическое оборудование</h3>
+          </div>
+          <div class="col-6 text-col text-center">
+            <img src="{% static 'index/section_one/icon_3.png' %}" alt="" width="64" class="mb-2">
+            <h3>Целимся на Луну и Марс</h3>
+          </div>
+          <div class="col-6 text-col text-center">
+            <img src="{% static 'index/section_one/icon_4.png' %}" alt="" width="64" class="mb-2">
+            <h3>Золотая медаль по научным исследованиям</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая колонка -->
+      <div class="col-6 d-flex justify-content-end align-items-center" style="padding: 20px;">
+        <img src="{% static 'index/section_one/image.jpeg' %}" alt="Изображение" class="img-styled">
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+  <div class="container-fluid">
+    <div class="row gap-lg-5">
+      <div class="col-12 text-center" id="images">
+        <h2>Фотографии</h2>
+
+        <div class="slider-for">
+          {% for slider in sliders %}
+          <div class="main-image-slider">
+            <a href="{{ slider.image.url }}" data-lightbox="gallery"
+              data-title="{{ slider.title }}">
+              <img src="{{ slider.image.url }}" alt="{{ slider.title }}">
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="slider-nav">
+          {% for slider in sliders %}
+          <div class="slider-nav-imag">
+            <img class="my_img" src="{{ slider.image.url }}" alt="{{ slider.title }}">
+          </div>
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="{% static 'index/slick/slick.min.js' %}"></script>
+
+  <script type="text/javascript">
+    // Пришлось вынести в переменные птому что ругался Django
+    var leftArrow = "{% static 'index/arrows/left-arrow.png' %}";
+    var rightArrow = "{% static 'index/arrows/right-arrow.png' %}";
+
+    // слайдер для отображения картинок
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.slider-nav'
+    });
+
+    $('.slider-nav').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow: '<button class="slick-prev" aria-label="Previous"><img src="' + leftArrow + '" alt="Previous"></button>',
+      nextArrow: '<button class="slick-next" aria-label="Next"><img src="' + rightArrow + '" alt="Next"></button>',
+      asNavFor: '.slider-for',
+      dots: false,
+      centerMode: false,
+      focusOnSelect: true,
+    });
+  </script>
+</body>
+
+</html>

@@ -33,6 +33,7 @@ __pycache__/
 *.so
 
 media/
+staticfiles/
 
 # Distribution / packaging
 .Python
